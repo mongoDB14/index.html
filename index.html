@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Hello, World!</title>
+</head>
+<body>
+  <h1>
+    Hello, World!
+  </h1>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>برنامج رسم وتحريك الشخصيات الكرتونية</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+        #canvasContainer {
+            border: 1px solid #ddd;
+            background-color: #fff;
+            width: 800px;
+            height: 600px;
+            position: relative;
+        }
+        #controls {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        button, select, input[type="range"] {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>برنامج رسم وتحريك الشخصيات الكرتونية</h1>
+    <div id="canvasContainer">
+        <canvas id="canvas" width="800" height="600"></canvas>
+    </div>
+    <div id="controls">
+        <button onclick="addShape()">إضافة شكل</button>
+        <button onclick="startAnimation()">تشغيل الأنيميشن</button>
+        <button onclick="stopAnimation()">إيقاف الأنيميشن</button>
+        
+        <label>حجم الشكل:</label>
+        <input type="range" id="sizeSlider" min="10" max="100" value="30" onchange="changeSize()">
+        
+        <label>سرعة الأنيميشن:</label>
+        <input type="range" id="speedSlider" min="1" max="10" value="5" onchange="changeSpeed()">
+        
+        <select id="colorPicker" onchange="changeColor()">
+            <option value="#000000">أسود</option>
+            <option value="#FF0000">أحمر</option>
+            <option value="#00FF00">أخضر</option>
+            <option value="#0000FF">أزرق</option>
+        </select>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
